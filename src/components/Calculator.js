@@ -1,4 +1,3 @@
-/* eslint react/jsx-props-no-spreading: 0 */
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
