@@ -1,38 +1,54 @@
-import React from 'react';
+/* eslint react/jsx-props-no-spreading: 0 */
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
+
+const obj = {
+  total: 0,
+  next: '',
+  operation: '',
+};
 
 function Calculator() {
+  const [object, setObject] = useState(obj);
+
+  const handleClick = (e) => {
+    setObject(calculate(object, e.target.textContent));
+  };
+
   return (
     <main className="calculator-container">
-      <Calc />
+      <div className="calculator-grid">
+        <div className="output">
+          <div className="current-operand">
+            {object.total}
+            {' '}
+            {object.operation}
+            {' '}
+            {object.next}
+          </div>
+        </div>
+        <button type="button" onClick={handleClick}>AC</button>
+        <button type="button" onClick={handleClick}>+/-</button>
+        <button type="button" onClick={handleClick}>%</button>
+        <button className="operator" type="button" onClick={handleClick}>÷</button>
+        <button type="button" onClick={handleClick}>1</button>
+        <button type="button" onClick={handleClick}>2</button>
+        <button type="button" onClick={handleClick}>3</button>
+        <button className="operator" type="button" onClick={handleClick}>x</button>
+        <button type="button" onClick={handleClick}>4</button>
+        <button type="button" onClick={handleClick}>5</button>
+        <button type="button" onClick={handleClick}>6</button>
+        <button className="operator" type="button" onClick={handleClick}>+</button>
+        <button type="button" onClick={handleClick}>7</button>
+        <button type="button" onClick={handleClick}>8</button>
+        <button type="button" onClick={handleClick}>9</button>
+        <button className="operator" type="button" onClick={handleClick}>-</button>
+        <button className="span-two" type="button" onClick={handleClick}>0</button>
+        <button type="button" onClick={handleClick}>.</button>
+        <button className="operator" type="button" onClick={handleClick}>=</button>
+      </div>
     </main>
   );
 }
-
-const Calc = () => (
-  <div className="calculator-grid">
-    <div className="output">
-      <div data-current-operand className="current-operand">0</div>
-    </div>
-    <button type="button" data-all-clear>AC</button>
-    <button type="button" data-delete>+/-</button>
-    <button type="button" data-delete>&#37;</button>
-    <button className="operator" type="button" data-operation>&divide;</button>
-    <button type="button" data-number>1</button>
-    <button type="button" data-number>2</button>
-    <button type="button" data-number>3</button>
-    <button className="operator" type="button" data-operation>&times;</button>
-    <button type="button" data-number>4</button>
-    <button type="button" data-number>5</button>
-    <button type="button" data-number>6</button>
-    <button className="operator" type="button" data-operation>&#43;</button>
-    <button type="button" data-number>7</button>
-    <button type="button" data-number>8</button>
-    <button type="button" data-number>9</button>
-    <button className="operator" type="button" data-operation>&#45;</button>
-    <button className="span-two" type="button" data-number>0</button>
-    <button type="button" data-number>.</button>
-    <button className="operator" type="button" data-equals>&#61;</button>
-  </div>
-);
 
 export default Calculator;
