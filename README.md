@@ -75,7 +75,7 @@ sh
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[I intend to add "Book update" functionality]**
+- [ ] **[I intend to to other operatons like square root]**
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
