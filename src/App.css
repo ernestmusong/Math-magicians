@@ -15,10 +15,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0 auto;
   width: 100%;
-  position: fixed;
   padding-bottom: 10px;
   background: blue;
 }
@@ -31,6 +29,55 @@ body {
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 60px);
 }
+
+/* -------------------------------------------------------------------------QUOTES */
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  margin: 0 auto;
+  width: 800px;
+  height: 500px;
+}
+
+#quote-box {
+  margin: 0 auto;
+  width: 600px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.quote {
+  margin-left: 0.8rem;
+  font-size: 1rem;
+}
+
+#author {
+  text-align: left;
+}
+
+#text {
+  margin-left: 1rem;
+  padding-top: 50px;
+}
+
+.spinner {
+  animation: spin 0.7s linear infinite;
+}
+
+.error {
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
+}
+
+/* ----------------------------------------------------------MEDIA QUERIES */
 
 @media screen and (max-width: 330px) {
   .calculator-grid {
