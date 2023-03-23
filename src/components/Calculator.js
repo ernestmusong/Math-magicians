@@ -15,7 +15,7 @@ function Calculator() {
   };
 
   return (
-    <main className="calculator-container">
+    <section className="calculator-container">
       <div className="calculator-grid">
         <div className="output">
           <div className="current-operand">
@@ -46,7 +46,7 @@ function Calculator() {
         <button type="button" onClick={handleClick}>.</button>
         <button className="operator" type="button" onClick={handleClick}>=</button>
       </div>
-    </main>
+    </section>
   );
 }
 

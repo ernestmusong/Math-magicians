@@ -1,15 +1,12 @@
-import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Calculator from './components/Calculator';
+import Quotes from './components/Quotes';
 
 function App() {
   return (
     <>
-      <Switch>
-        <Route>
-          <Calculator />
-        </Route>
-      </Switch>
+      <Calculator />
+      <Quotes />
     </>
   );
 }
