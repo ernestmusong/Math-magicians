@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaCircleNotch, FaQuoteLeft } from 'react-icons/fa';
+import styles from '../styles/Quotes.module.css';
 
 function Quotes() {
   const [data, setData] = useState([]);
@@ -32,30 +33,31 @@ function Quotes() {
 
   if (hasError) {
     return (
-      <div className="wrap">
-        <p className="error">Something went wrong!</p>
+      <div className={styles.wrap}>
+        <p className={styles.error}>Something went wrong!</p>
       </div>
     );
   }
   if (isLoading) {
     return (
-      <div className="wrap">
-        <div className="spinner"><FaCircleNotch size={70} /></div>
+      <div className={styles.wrap}>
+        <div className={styles.spinner}><FaCircleNotch size={70} /></div>
       </div>
     );
   }
 
   return (
-    <section className="wrap">
-      <div id="quote-box">
+    <section className={styles.wrap}>
+      <div id={styles.box}>
         {data.map((item) => (
-          <blockquote key={data.indexOf(item)} className="blockquote">
-            <p className="quote">
+          <blockquote key={data.indexOf(item)} className={styles.blockquote}>
+            <p className={styles.quote}>
               <FaQuoteLeft size={42} />
-              <span id="text">{item.quote}</span>
+              <span id={styles.text}>{item.quote}</span>
             </p>
-            <footer className="blockquote-footer" id="author">
-              {item.author}
+            <footer>
+              <span className={styles.author} style={{ marginRight: '5px' }}>-</span>
+              <span className={styles.author}>{item.author}</span>
             </footer>
           </blockquote>
         ))}
