@@ -1,91 +1,85 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    padding-bottom: 10px;
-    height: 100vh;
-  }
-  
-  .contentWraper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 10px;
+  height: 100vh;
+}
+
+.contentWraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 80%;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 60px);
+}
+
+.grid > button {
+  cursor: pointer;
+  font-size: 32px;
+  border: 0.5px solid #f0f0f0;
+  outline: none;
+  background: #ccc;
+}
+
+.grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.spanTwo {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.grid .operator {
+  background: #ff8000;
+}
+
+.grid .operator:hover {
+  background: #f93;
+}
+
+/* ----------------------------------------------------------MEDIA QUERIES */
+
+@media screen and (max-width: 330px) {
   .grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 80%;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 60px);
     grid-template-rows: minmax(120px, auto) repeat(5, 60px);
   }
-  
-  .grid > button {
-    cursor: pointer;
-    font-size: 32px;
-    border: 0.5px solid #f0f0f0;
-    outline: none;
-    background: #ccc;
+}
+
+@media screen and (min-width: 768px) {
+  .contentWraper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
-  
-  .grid > button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .spanTwo {
-    grid-column: span 2;
-  }
-  
-  .output {
-    grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-  
-  .output .operand {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 24px;
-  }
-  
-  .output .operand {
-    color: white;
-    font-size: 2.5rem;
-  }
-  
-  .grid .operator {
-    background: #ff8000;
-  }
-  
-  .grid .operator:hover {
-    background: #f93;
-  }
-  
-  /* ----------------------------------------------------------MEDIA QUERIES */
-  
-  @media screen and (max-width: 330px) {
-    .grid {
-      grid-template-columns: repeat(4, 60px);
-      grid-template-rows: minmax(120px, auto) repeat(5, 60px);
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .contentWraper {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-  }
-  
+}
