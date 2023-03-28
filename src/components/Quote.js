@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaCircleNotch, FaQuoteLeft } from 'react-icons/fa';
 import styles from '../styles/Quotes.module.css';
 
-function Quotes() {
+function Quote() {
   const [data, setData] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -66,4 +66,4 @@ function Quotes() {
   );
 }
 
-export default Quotes;
+export default Quote;

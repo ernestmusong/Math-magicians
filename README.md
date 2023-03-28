@@ -24,7 +24,7 @@
 
 # 📖 [Math Magicians] <a name="about-project"></a>
 
-**[Math Magicians]** is a project at <a href='https://www.microverse.org/'>Microverse</a> module three. A single page application containing three pages: a welcome page, a calculator and a quotes page. The quotes page displays a random quote from the Api Ninja external api. The calculator component contains a calculator with nine operators and performs mathematical operations.
+**[Math Magicians]** is a project at <a href='https://www.microverse.org/'>Microverse</a> module three. A single page application containing three pages: a welcome page, a calculator and a quotes page. The quote page displays a random quote from the Api Ninja external api. The calculator component contains a calculator with nine operators and performs mathematical operations.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -42,7 +42,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://musong-math-magicians.netlify.app/)
+- [Live Demo Link](#)
 
 ## 🚀 Project Presentation <a name="live-demo"></a>
 

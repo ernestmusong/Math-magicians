@@ -5,7 +5,7 @@ import styles from '../styles/Navbar.module.css';
 const links = [
   { path: '/', text: 'Home' },
   { path: 'calculator', text: 'Calculator' },
-  { path: 'quotes', text: 'Quotes' },
+  { path: 'quote', text: 'Quote' },
 ];
 function Navbar() {
   return (
