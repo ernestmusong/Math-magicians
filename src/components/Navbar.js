@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from '../styles/Navbar.module.css';
 
 const links = [
   { path: '/', text: 'Home' },
@@ -9,14 +8,14 @@ const links = [
 ];
 function Navbar() {
   return (
-    <nav className={styles.nav}>
-      <h2 id={styles.logo}>math magicians</h2>
-      <ul className={styles.linksContainer}>
+    <nav className="nav">
+      <h2 id="logo">math magicians</h2>
+      <ul className="linksContainer">
         {links.map((link) => (
           <li key={link.text}>
             <NavLink
               to={link.path}
-              className={({ isActive }) => (isActive ? styles.active : styles.normal)}
+              className={({ isActive }) => (isActive ? 'active' : 'normal')}
             >
               {link.text}
             </NavLink>

@@ -42,7 +42,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](#)
+- [Live Demo Link](https://deploy-preview-5--musong-math-magicians.netlify.app/)
 
 ## 🚀 Project Presentation <a name="live-demo"></a>
 
@@ -50,7 +50,9 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-### Prerequisites
+### Preriquisites
+
+Node version >= 14
 
 ### Setup
 
@@ -59,10 +61,10 @@ sh
   cd my-folder
  git clone https://github.com/ernestmusong/Math-Magicians.git
 
- ### Install dependencies:
+ ### Install:
  Run: npm install
 
- ### Start the dev server:
+ ### Start:
  Run: npm start
 
 
