@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const Layout = () => (
-  <header className="header">
+  <header data-testid="header" className="header">
     <Navbar />
     <Outlet />
   </header>

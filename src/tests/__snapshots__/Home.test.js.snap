@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render the Home component 1`] = `
+<section
+  className="home"
+>
+  <div
+    className="contentWrap"
+  >
+    <h2>
+      Welcome to our page!
+    </h2>
+    <p>
+      <p>
+        Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti penatibus convallis nostra magna sed dictum. Aenean blandit curabitur hendrerit; est ipsum metus. Congue ad torquent, mi quis euismod tellus. Facilisi tellus vitae facilisi quisque phasellus semper facilisis. Praesent vel sem lorem; lorem cubilia ante venenatis tristique. Conubia aliquam eget taciti praesent fermentum est ut. Quisque nunc himenaeos finibus metus condimentum ultrices eget.
+      </p>
+      <p>
+        Neque pulvinar conubia ullamcorper tristique fusce aenean dignissim. Convallis orci odio pellentesque nam, elit purus. Proin porttitor platea auctor himenaeos nascetur primis ut. Ridiculus iaculis pellentesque vel luctus convallis massa ad. Commodo non orci maecenas auctor finibus sollicitudin. Porttitor volutpat augue metus habitasse blandit.
+      </p>
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Home should render the home component 1`] = `
+<section
+  className="home"
+>
+  <div
+    className="contentWrap"
+  >
+    <h2>
+      Welcome to our page!
+    </h2>
+    <p>
+      <p>
+        Lorem ipsum odor amet, consectetuer adipiscing elit. Laoreet euismod id id sociosqu orci. Mi arcu justo at non auctor ullamcorper. Aliquam eu parturient eleifend phasellus hendrerit eros augue torquent. Libero magnis sem mollis porta quisque mus himenaeos. Blandit curae porttitor conubia, quam amet pharetra condimentum integer. Consectetur vel aliquet torquent interdum aptent.
+      </p>
+      <p>
+        Sociosqu varius volutpat sociosqu ullamcorper egestas cursus. Accumsan pretium ante praesent pretium dis dictumst accumsan ullamcorper? Ridiculus lacinia elit proin hendrerit ultrices sapien litora mauris. Eleifend arcu magna nascetur; condimentum ultrices auctor placerat mollis. Nascetur dui luctus litora convallis augue senectus dictum eget ad. Fermentum ultrices nec nostra libero vestibulum faucibus. Odio nec hac semper laoreet molestie vivamus pulvinar.
+      </p>
+    </p>
+  </div>
+</section>
+`;
