@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import Layout from '../components/Navbar';
 
 describe('Navbar', () => {
   it('test Header rendering', () => {
     render(
       <BrowserRouter>
-        <Navbar />
+        <Layout />
       </BrowserRouter>,
     );
     const headerElement = screen.getByText(/math magicians/i);
