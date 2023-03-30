@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaCircleNotch, FaQuoteLeft } from 'react-icons/fa';
 
-function Quotes() {
+function Quote() {
   const [data, setData] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,15 +47,16 @@ function Quotes() {
 
   return (
     <section className="wrap">
-      <div id="quote-box">
+      <div id="box">
         {data.map((item) => (
           <blockquote key={data.indexOf(item)} className="blockquote">
             <p className="quote">
               <FaQuoteLeft size={42} />
               <span id="text">{item.quote}</span>
             </p>
-            <footer className="blockquote-footer" id="author">
-              {item.author}
+            <footer>
+              <span className="author" style={{ marginRight: '5px' }}>-</span>
+              <span className="author">{item.author}</span>
             </footer>
           </blockquote>
         ))}
@@ -64,4 +65,4 @@ function Quotes() {
   );
 }
 
-export default Quotes;
+export default Quote;

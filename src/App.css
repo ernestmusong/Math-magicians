@@ -9,19 +9,93 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.calculator-container {
+/* ----------------------------------------------------------NAVBAR */
+
+.nav {
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  color: #212529;
+  gap: 10px;
+}
+
+.linksContainer a.normal {
+  text-decoration: none;
+  color: #333;
+}
+
+.linksContainer a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+/* -----------------------------------------------------------HOME */
+
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   width: 100%;
   padding-bottom: 10px;
-  background: blue;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 100vh;
 }
 
-.calculator-grid {
+.home .contentWraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* -----------------------------------------------------------------CALCULATOR */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 10px;
+  height: 100vh;
+}
+
+.container .contentWraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.grid {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -30,75 +104,19 @@ body {
   grid-template-rows: minmax(120px, auto) repeat(5, 60px);
 }
 
-/* -------------------------------------------------------------------------QUOTES */
-.wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: green;
-  margin: 0 auto;
-  width: 800px;
-  height: 500px;
-}
-
-#quote-box {
-  margin: 0 auto;
-  width: 600px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.quote {
-  margin-left: 0.8rem;
-  font-size: 1rem;
-}
-
-#author {
-  text-align: left;
-}
-
-#text {
-  margin-left: 1rem;
-  padding-top: 50px;
-}
-
-.spinner {
-  animation: spin 0.7s linear infinite;
-}
-
-.error {
-  color: #000;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-@keyframes spin {
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-}
-
-/* ----------------------------------------------------------MEDIA QUERIES */
-
-@media screen and (max-width: 330px) {
-  .calculator-grid {
-    grid-template-columns: repeat(4, 60px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 60px);
-  }
-}
-
-.calculator-grid > button {
+.grid > button {
   cursor: pointer;
   font-size: 32px;
   border: 0.5px solid #f0f0f0;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background: #ccc;
 }
 
-.calculator-grid > button:hover {
+.grid > button:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.span-two {
+.spanTwo {
   grid-column: span 2;
 }
 
@@ -114,20 +132,82 @@ body {
   word-break: break-all;
 }
 
-.output .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 24px;
-}
-
-.output .current-operand {
+.output .operand {
   color: white;
   font-size: 2.5rem;
 }
 
-.calculator-grid .operator {
+.grid .operator {
   background: #ff8000;
 }
 
-.calculator-grid .operator:hover {
+.grid .operator:hover {
   background: #f93;
+}
+
+/* ------------------------------------------------------------------QUOTE */
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 10px;
+}
+
+#box {
+  margin: 0 auto;
+  width: 600px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.quote {
+  margin-left: 0.8rem;
+  font-size: 1rem;
+}
+
+.author {
+  text-align: left;
+  color: #aeadad;
+}
+
+#text {
+  margin-left: 1rem;
+  padding-top: 50px;
+}
+
+.spinner {
+  animation: spin 0.7s linear infinite;
+}
+
+.error {
+  color: #f0f0f0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+/* ----------------------------------------------------------MEDIA QUERIES */
+
+@media screen and (max-width: 330px) {
+  .grid {
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 60px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .contentWraper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
