@@ -30,7 +30,7 @@ describe('operate', () => {
   });
 
   it('should throw error for unknown operation', () => {
-    expect(() => operate(2, 3, '*')).toThrow("Unknown operation '*'");
+    expect(() => operate(2, 3, '')).toThrow("Unknown operation ''");
   });
 
   it('should handle decimal addition', () => {

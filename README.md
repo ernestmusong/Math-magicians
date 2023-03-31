@@ -67,6 +67,9 @@ sh
  ### Start:
  Run: npm start
 
+ ### Run tests:
+ Run: npm test
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
