@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error should render the Error component 1`] = `
+<div
+  id="error-page"
+>
+  <h1>
+    Oops!
+  </h1>
+  <p>
+    Sorry, an unexpected error has occurred.
+  </p>
+  <p>
+    <i>
+      Page not found
+    </i>
+  </p>
+</div>
+`;
