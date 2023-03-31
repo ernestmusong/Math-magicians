@@ -1,12 +1,18 @@
 import React from 'react';
-import { LoremIpsum } from 'react-lorem-ipsum';
 
 function Home() {
   return (
     <section className="home">
       <div className="contentWrap">
         <h2>Welcome to our page!</h2>
-        <p><LoremIpsum p={2} /></p>
+        <p>
+          To create a variable with local scope, declare
+          it inside the selector that is going to use it.
+        </p>
+        <p>
+          To create a variable with local scope, declare
+          it inside the selector that is going to use it.
+        </p>
       </div>
     </section>
   );
